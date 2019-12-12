@@ -12,7 +12,7 @@ class NewspaperController extends Controller
     public function index()
     {
         $newspaper =  Newspaper::orderby('id','desc')->get();
-        return view('npcrud/newspaper',['newspapers'=>$newspaper,]);
+        return view('npcrud.newspaper',['newspapers'=>$newspaper,]);
     }
 
     /**
@@ -36,7 +36,7 @@ class NewspaperController extends Controller
         $newsStore = new Newspaper;
         $newsStore->title = $request->get('title');
         $newsStore->save();
-        return redirect()->to('npcrud\edit');
+        return redirect()->to('npcrud.edit');
     }
 
     /**
@@ -62,7 +62,7 @@ class NewspaperController extends Controller
     public function edit($id)
     {
         $newsEdit = Newspaper::findorFail($id);
-        return view('npcrud\edit',['update'=>$newsEdit,]);
+        return view('npcrud.edit',['update'=>$newsEdit,]);
     }
 
     /**
