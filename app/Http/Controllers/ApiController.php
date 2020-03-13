@@ -14,44 +14,26 @@ use App\Model\User;
 
 class ApiController extends Controller
 {
-
   public function commnetslist()
   {
     return Resource::collection(Comment::all());
   }
-
-  public function comment($commnetId)
-  {
-    return Comment::findOrFail($commnetId);
-  }
-
   public function userslist()
   {
     return Resource::collection(User::all());
   }
-
-  public function user($userId)
+  public function newfeedlist()
   {
-    // dd($userId);
-    return User::findOrFail($userId);
+    return Resource::collection(Newsfeed::all());
   }
-
-
-
-
-  public function dlist()
+  public function newspaperlist()
   {
     $newspaper = Newspaper::all('id','title','image','created_at');
     $banner = Banner::all('id','newspaper_id','banner_img_path','created_at');
-
     $collection = collect(['banners','newspapers']);
-
     $out = Resource::collection($collection->combine([ $banner, $newspaper, ]));
-
     $n = Resource::collection(Newspaper::all());
     $b = Resource::collection(Banner::all());
-
-
     return [
       'data' => [
         [
@@ -64,6 +46,14 @@ class ApiController extends Controller
         ],
       ],
     ];
+  }
+  public function login(Request $request){
+    $mail = User::selectUser($request->all('email'));
+    if($mail->isEmpty()){
+      return response('Login failed', 404);
+    }else{
+      return $mail;
+    }
   }
 
 }

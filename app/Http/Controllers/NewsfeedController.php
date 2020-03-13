@@ -43,8 +43,5 @@ class NewsfeedController extends Controller
     public function destroy(newsfeed $newsfeed)
     {
     }
-    public function list()
-    {
-        return Resource::collection(Newsfeed::all());
-    }
+    
 }
