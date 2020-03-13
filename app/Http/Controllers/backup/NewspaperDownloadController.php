@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\model\newspaperDownload;
+use App\Model\newspaperDownload;
 use Illuminate\Http\Request;
 
 class NewspaperDownloadController extends Controller
@@ -41,7 +41,7 @@ class NewspaperDownloadController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\model\newspaperDownload  $newspaperDownload
+     * @param  \App\Model\newspaperDownload  $newspaperDownload
      * @return \Illuminate\Http\Response
      */
     public function show(newspaperDownload $newspaperDownload)
@@ -52,7 +52,7 @@ class NewspaperDownloadController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\model\newspaperDownload  $newspaperDownload
+     * @param  \App\Model\newspaperDownload  $newspaperDownload
      * @return \Illuminate\Http\Response
      */
     public function edit(newspaperDownload $newspaperDownload)
@@ -64,7 +64,7 @@ class NewspaperDownloadController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\model\newspaperDownload  $newspaperDownload
+     * @param  \App\Model\newspaperDownload  $newspaperDownload
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, newspaperDownload $newspaperDownload)
@@ -75,7 +75,7 @@ class NewspaperDownloadController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\model\newspaperDownload  $newspaperDownload
+     * @param  \App\Model\newspaperDownload  $newspaperDownload
      * @return \Illuminate\Http\Response
      */
     public function destroy(newspaperDownload $newspaperDownload)

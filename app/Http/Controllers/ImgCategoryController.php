@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\model\imgCategory;
+use App\Model\imgCategory;
 use Illuminate\Http\Request;
 
 class ImgCategoryController extends Controller
@@ -41,7 +41,7 @@ class ImgCategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\model\imgCategory  $imgCategory
+     * @param  \App\Model\imgCategory  $imgCategory
      * @return \Illuminate\Http\Response
      */
     public function show(imgCategory $imgCategory)
@@ -52,7 +52,7 @@ class ImgCategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\model\imgCategory  $imgCategory
+     * @param  \App\Model\imgCategory  $imgCategory
      * @return \Illuminate\Http\Response
      */
     public function edit(imgCategory $imgCategory)
@@ -64,7 +64,7 @@ class ImgCategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\model\imgCategory  $imgCategory
+     * @param  \App\Model\imgCategory  $imgCategory
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, imgCategory $imgCategory)
@@ -75,7 +75,7 @@ class ImgCategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\model\imgCategory  $imgCategory
+     * @param  \App\Model\imgCategory  $imgCategory
      * @return \Illuminate\Http\Response
      */
     public function destroy(imgCategory $imgCategory)

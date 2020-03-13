@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\model\User;
+use App\Model\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -37,11 +37,6 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $storeUser = new User;
-        $storeUser->Name = $request->get('Name');
-        $storeUser->Age=$request->get('Age');
-        $storeUser->save();
-        return redirect()->to('usercrud\user');
     }
 
     /**
@@ -77,10 +72,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $userUpdate = User::findorFail($id);
-        $userUpdate->name = $request ->input('name');
-        $userUpdate->gender = $request ->input('gender');
-        $userUpdate->birthday = $request ->input('birthday');
-        $userUpdate->phone = $request ->input('phone');
+        $userUpdate->studentid = $request ->input('studentid');
         $userUpdate->email = $request ->input('Email');
         $userUpdate->password = $request ->input('password');
         $userUpdate->save();

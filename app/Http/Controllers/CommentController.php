@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\model\Comment;
+use App\Model\Comment;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -44,7 +44,7 @@ class CommentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\model\comment  $comment
+     * @param  \App\Model\comment  $comment
      * @return \Illuminate\Http\Response
      */
     public function show($commentId)
@@ -55,35 +55,35 @@ class CommentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\model\comment  $comment
+     * @param  \App\Model\comment  $comment
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $newsfeedEdit = Comment::findorFail($id);
-        return view('nfcrud\edit',['update'=>$newsfeedEdit,]);
+        $commentEdit = Comment::findorFail($id);
+        return view('comcrud\edit',['update'=>$commentEdit,]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\model\comment  $comment
+     * @param  \App\Model\comment  $comment
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, comment $comment)
     {
-        //
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\model\comment  $comment
+     * @param  \App\Model\comment  $comment
      * @return \Illuminate\Http\Response
      */
     public function destroy(comment $comment)
     {
-        //
+        dd($comment);
     }
 }

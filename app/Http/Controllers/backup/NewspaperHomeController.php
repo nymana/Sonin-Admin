@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\model\newspaperHome;
+use App\Model\newspaperHome;
 use Illuminate\Http\Request;
 
 class NewspaperHomeController extends Controller
@@ -41,7 +41,7 @@ class NewspaperHomeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\model\newspaperHome  $newspaperHome
+     * @param  \App\Model\newspaperHome  $newspaperHome
      * @return \Illuminate\Http\Response
      */
     public function show(newspaperHome $newspaperHome)
@@ -52,7 +52,7 @@ class NewspaperHomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\model\newspaperHome  $newspaperHome
+     * @param  \App\Model\newspaperHome  $newspaperHome
      * @return \Illuminate\Http\Response
      */
     public function edit(newspaperHome $newspaperHome)
@@ -64,7 +64,7 @@ class NewspaperHomeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\model\newspaperHome  $newspaperHome
+     * @param  \App\Model\newspaperHome  $newspaperHome
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, newspaperHome $newspaperHome)
@@ -75,7 +75,7 @@ class NewspaperHomeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\model\newspaperHome  $newspaperHome
+     * @param  \App\Model\newspaperHome  $newspaperHome
      * @return \Illuminate\Http\Response
      */
     public function destroy(newspaperHome $newspaperHome)

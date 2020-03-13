@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\model\newsfeedHome;
+use App\Model\newsfeedHome;
 use Illuminate\Http\Request;
 
 class NewsfeedHomeController extends Controller
@@ -41,7 +41,7 @@ class NewsfeedHomeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\model\newsfeedHome  $newsfeedHome
+     * @param  \App\Model\newsfeedHome  $newsfeedHome
      * @return \Illuminate\Http\Response
      */
     public function show(newsfeedHome $newsfeedHome)
@@ -52,7 +52,7 @@ class NewsfeedHomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\model\newsfeedHome  $newsfeedHome
+     * @param  \App\Model\newsfeedHome  $newsfeedHome
      * @return \Illuminate\Http\Response
      */
     public function edit(newsfeedHome $newsfeedHome)
@@ -64,7 +64,7 @@ class NewsfeedHomeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\model\newsfeedHome  $newsfeedHome
+     * @param  \App\Model\newsfeedHome  $newsfeedHome
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, newsfeedHome $newsfeedHome)
@@ -75,7 +75,7 @@ class NewsfeedHomeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\model\newsfeedHome  $newsfeedHome
+     * @param  \App\Model\newsfeedHome  $newsfeedHome
      * @return \Illuminate\Http\Response
      */
     public function destroy(newsfeedHome $newsfeedHome)

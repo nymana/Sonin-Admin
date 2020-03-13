@@ -16,6 +16,7 @@ class CreateNewsfeedsTable extends Migration
         Schema::create('newsfeeds', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->longText('bodyText');
+            $table->string('image')->nullable();
             $table->integer('commentCounts');
             $table->integer('loveCounts');
             $table->integer('viewCounts');

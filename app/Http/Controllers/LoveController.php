@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\model\love;
+use App\Model\love;
 use Illuminate\Http\Request;
 
 class LoveController extends Controller
@@ -41,7 +41,7 @@ class LoveController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\model\love  $love
+     * @param  \App\Model\love  $love
      * @return \Illuminate\Http\Response
      */
     public function show(love $love)
@@ -52,7 +52,7 @@ class LoveController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\model\love  $love
+     * @param  \App\Model\love  $love
      * @return \Illuminate\Http\Response
      */
     public function edit(love $love)
@@ -64,7 +64,7 @@ class LoveController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\model\love  $love
+     * @param  \App\Model\love  $love
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, love $love)
@@ -75,7 +75,7 @@ class LoveController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\model\love  $love
+     * @param  \App\Model\love  $love
      * @return \Illuminate\Http\Response
      */
     public function destroy(love $love)

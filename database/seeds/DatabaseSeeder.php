@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\model\Newspaper;
-use App\model\Newsfeed;
+use App\Model\Newspaper;
+use App\Model\Newsfeed;
+use App\Model\Comment;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,8 +14,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(CommentSeeder::class);
         factory(Newspaper::class,10)->create();
         factory(Newsfeed::class,10)->create();
+        factory(Comment::class,15)->create();
     }
 }

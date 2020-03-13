@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\model\Image;
+use App\Model\Image;
 use Illuminate\Http\Request;
 
 class ImageController extends Controller
@@ -42,7 +42,7 @@ class ImageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\model\image  $image
+     * @param  \App\Model\image  $image
      * @return \Illuminate\Http\Response
      */
     public function show(image $image)
@@ -53,7 +53,7 @@ class ImageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\model\image  $image
+     * @param  \App\Model\image  $image
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -66,7 +66,7 @@ class ImageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\model\image  $image
+     * @param  \App\Model\image  $image
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, image $image)
@@ -77,7 +77,7 @@ class ImageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\model\image  $image
+     * @param  \App\Model\image  $image
      * @return \Illuminate\Http\Response
      */
     public function destroy(image $image)
@@ -90,13 +90,6 @@ class ImageController extends Controller
         request()->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
-//        if ($files = $request->file('image')) {
-//            $destinationPath = 'storage/app/image'; // upload path
-//            $profileImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
-//            $files->move($destinationPath, $profileImage);
-//            $insert['image'] = "$profileImage";
-//        }
 
         $path = $request->file('image')->storePublicly('image');
 

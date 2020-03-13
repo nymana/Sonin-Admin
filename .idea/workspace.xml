@@ -2,10 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4687e1e-e58a-4b93-a8dc-6cbfe56966ad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/banners/banner.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/banners/insert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/admin_tiding.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/admin_tiding.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8a562a28-cfa2-43e0-bcc9-06a87f95a3e0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8a562a28-cfa2-43e0-bcc9-06a87f95a3e0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BannerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BannersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FileUploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FileUploadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImgCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImgCategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImgUploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImgUploadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoveController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsfeedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsfeedController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewspaperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewspaperController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backup/NewsfeedDetailsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backup/NewsfeedDetailsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backup/NewsfeedHomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backup/NewsfeedHomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backup/NewspaperDetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backup/NewspaperDetailController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backup/NewspaperDownloadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backup/NewspaperDownloadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backup/NewspaperHomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backup/NewspaperHomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Banner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/ImgCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/ImgCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Love.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Love.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Newsfeed.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Newsfeed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Newspaper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Newspaper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/BannerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/BannerFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/CommentFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CommentFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ImageFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ImageFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ImgCategoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ImgCategoryFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/LoveFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/LoveFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/NewsfeedFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/NewsfeedFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/NewspaperFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/NewspaperFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_10_141754_create_newspapers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_10_141754_create_newspapers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_11_134858_create_banners_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_11_134858_create_banners_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_11_141733_create_newsfeeds_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_11_141733_create_newsfeeds_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_11_141919_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_11_141919_create_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CommentSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/comcrud/comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/comcrud/comment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/comcrud/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/comcrud/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/nfcrud/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nfcrud/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/nfcrud/newsfeed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nfcrud/newsfeed.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/npcrud/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/npcrud/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/npcrud/newspaper.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/npcrud/newspaper.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usercrud/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usercrud/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/usercrud/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usercrud/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,13 +101,6 @@
         <item name="admin_new@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="admin_new: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="admin_new@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="admin_new: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="newspapers: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -149,30 +200,36 @@
   </component>
   <component name="ProjectId" id="1TlvjWet5uIDAfVyewPdGWJ6NhR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -200,7 +257,19 @@
       <workItem from="1575543824309" duration="355000" />
       <workItem from="1575634464616" duration="1334000" />
       <workItem from="1576067808827" duration="3608000" />
-      <workItem from="1576114136207" duration="67000" />
+      <workItem from="1576114136207" duration="1198000" />
+      <workItem from="1578557836014" duration="177000" />
+      <workItem from="1578558851608" duration="3723000" />
+      <workItem from="1578806300908" duration="4993000" />
+      <workItem from="1578962873795" duration="4240000" />
+      <workItem from="1579404367634" duration="1617000" />
+      <workItem from="1579437153045" duration="7476000" />
+      <workItem from="1579952090850" duration="2518000" />
+      <workItem from="1580729088918" duration="6784000" />
+      <workItem from="1581041022488" duration="6382000" />
+      <workItem from="1581241107656" duration="33000" />
+      <workItem from="1581247639998" duration="868000" />
+      <workItem from="1581253539149" duration="605000" />
     </task>
     <servers />
   </component>
@@ -220,6 +289,37 @@
       </map>
     </option>
   </component>
+  <component name="WindowStateProjectService">
+    <state x="434" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580045284486">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="434" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1580045284486" />
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579441787048">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1579441787048" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1579005350005">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579005350005" />
+    <state x="378" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1581254571200">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1581254571200" />
+    <state x="378" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581247638913" />
+    <state x="323" y="0" width="882" height="726" key="recent.locations.popup" timestamp="1579006030882">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="323" y="0" width="882" height="726" key="recent.locations.popup/0.0.1366.728@0.0.1366.728" timestamp="1579006030882" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1580044443623">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1580044443623" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1580732656471">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1580732656471" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -227,6 +327,11 @@
           <url>file://$PROJECT_DIR$/database/factories/NewsfeedFactory.php</url>
           <line>4</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/CreateBannerController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

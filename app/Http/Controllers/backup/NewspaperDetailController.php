@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\model\newspaperDetail;
+use App\Model\newspaperDetail;
 use Illuminate\Http\Request;
 
 class NewspaperDetailController extends Controller
@@ -41,7 +41,7 @@ class NewspaperDetailController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\model\newspaperDetail  $newspaperDetail
+     * @param  \App\Model\newspaperDetail  $newspaperDetail
      * @return \Illuminate\Http\Response
      */
     public function show(newspaperDetail $newspaperDetail)
@@ -52,7 +52,7 @@ class NewspaperDetailController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\model\newspaperDetail  $newspaperDetail
+     * @param  \App\Model\newspaperDetail  $newspaperDetail
      * @return \Illuminate\Http\Response
      */
     public function edit(newspaperDetail $newspaperDetail)
@@ -64,7 +64,7 @@ class NewspaperDetailController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\model\newspaperDetail  $newspaperDetail
+     * @param  \App\Model\newspaperDetail  $newspaperDetail
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, newspaperDetail $newspaperDetail)
@@ -75,7 +75,7 @@ class NewspaperDetailController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\model\newspaperDetail  $newspaperDetail
+     * @param  \App\Model\newspaperDetail  $newspaperDetail
      * @return \Illuminate\Http\Response
      */
     public function destroy(newspaperDetail $newspaperDetail)

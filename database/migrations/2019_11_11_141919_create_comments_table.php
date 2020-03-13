@@ -24,7 +24,6 @@ class CreateCommentsTable extends Migration
 
             $table->unsignedBigInteger('userCommentId')->nullable();
             $table->foreign('userCommentId')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->json('json')->nullable();;
             $table->timestamps();
         });
     }
