@@ -19,11 +19,12 @@ class FileUploadController extends Controller
         ]);
 
         $path = $request->file('file')->storePublicly('file',['disk' => 'public']);
-
         $newspaper = Newspaper::findOrFail($request->get('newspaper_id'));
 
-        $newspaper->update(['file' => $path]);
+        $host = $request->getHttpHost();
+        $url = "$host"."/"."$path";
 
+        $newspaper->update(['file' => $url]);
         return redirect()->to("newspaper")
             ->withSuccess('Great! Image has been successfully uploaded.');
     }

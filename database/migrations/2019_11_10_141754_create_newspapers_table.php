@@ -15,7 +15,7 @@ class CreateNewspapersTable extends Migration
     {
         Schema::create('newspapers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title')->nullable;
+            $table->string('title')->nullable();
             $table->string('file')->nullable();
             $table->string('image')->nullable();
             $table->longText('description');

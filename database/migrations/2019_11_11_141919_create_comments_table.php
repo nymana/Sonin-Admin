@@ -16,12 +16,8 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->mediumText('c_Body');
-            $table->unsignedBigInteger('newspaperCommentId')->nullable();
-            $table->foreign('newspaperCommentId')->references('id')->on('newspapers')->onDelete('cascade')->onUpdate('cascade');
-
-            $table->unsignedBigInteger('newsfeedCommentId')->nullable();
-            $table->foreign('newsfeedCommentId')->references('id')->on('newsfeeds')->onDelete('cascade')->onUpdate('cascade');
-
+            $table->Integer('newspaperCommentId')->nullable();
+            $table->Integer('newsfeedCommentId')->nullable();
             $table->unsignedBigInteger('userCommentId')->nullable();
             $table->foreign('userCommentId')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

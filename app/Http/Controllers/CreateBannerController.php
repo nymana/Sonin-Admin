@@ -26,13 +26,12 @@ class CreateBannerController extends Controller
       request()->validate([
           'image' => 'required|image|mimes:jpeg,png,jpg,svg|max:5048',
       ]);
-
       $path = $request->file('image')->storePublicly('image',['disk' => 'public']);
-
+      $host = $request->getHttpHost();
+      $url = "$host"."/"."$path";
       $check = Banner::insertGetId([
-          'banner_img_path' => $path
+          'banner_img_path' => $url
       ]);
-
       return redirect()->back()->withSuccess('Great! Image has been successfully uploaded.');
     }
 

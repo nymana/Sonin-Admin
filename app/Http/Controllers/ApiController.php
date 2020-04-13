@@ -14,10 +14,6 @@ use App\Model\User;
 
 class ApiController extends Controller
 {
-  public function commnetslist()
-  {
-    return Resource::collection(Comment::all());
-  }
   public function userslist()
   {
     return Resource::collection(User::all());
@@ -30,8 +26,6 @@ class ApiController extends Controller
   {
     $newspaper = Newspaper::all('id','title','image','created_at');
     $banner = Banner::all('id','newspaper_id','banner_img_path','created_at');
-    $collection = collect(['banners','newspapers']);
-    $out = Resource::collection($collection->combine([ $banner, $newspaper, ]));
     $n = Resource::collection(Newspaper::all());
     $b = Resource::collection(Banner::all());
     return [
@@ -56,4 +50,29 @@ class ApiController extends Controller
     }
   }
 
+  public function commented(Request $request){
+    return Comment::create([
+      'c_Body' => $request['c_Body'],
+      'newspaperCommentId' => $request['newspaperCommentId'],
+      'newsfeedCommentId' => $request['newsfeedCommentId'],
+      'userCommentId' => $request['userCommentId']
+    ]);
+  }
+
+  public function newspaperComment($newspaperId){
+    return Comment::selectCommentForNewspaper($newspaperId);      
+  }
+
+  public function newsfeedComment($newsfeedId){
+    return Comment::selectCommentForNewsfeed($newsfeedId);
+  }
+
+  public function register(Request $request){
+    return User::create([
+      'name' => $request['name'],
+      'email' => $request['email'],
+      'studentid' => $request['studentid'],
+      'password' => $request['password']
+    ]);
+  }
 }
