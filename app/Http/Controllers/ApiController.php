@@ -18,45 +18,63 @@ class ApiController extends Controller
   {
     return Resource::collection(User::all());
   }
+
   public function newfeedlist()
   {
-    return Resource::collection(Newsfeed::all());
+    $newsfeed = Newsfeed::all('id','title','description','image');
+    return [
+      'data' => $newsfeed
+    ];
+    // return Resource::collection(Newsfeed::all());
   }
+
   public function newspaperlist()
   {
-    $newspaper = Newspaper::all('id','title','image','created_at');
-    $banner = Banner::all('id','newspaper_id','banner_img_path','created_at');
-    $n = Resource::collection(Newspaper::all());
-    $b = Resource::collection(Banner::all());
+    $newspaper = Newspaper::all('id','title','image');
+    $banner = Banner::all('id','newspaper_id','image');
     return [
       'data' => [
         [
           'component' => 'banner',
-          'data' => $b
+          'data' => $banner
         ],
         [
           'component' => 'newspaper',
-          'data' => $n
+          'data' => $newspaper
         ],
       ],
     ];
   }
+
   public function login(Request $request){
-    $mail = User::selectUser($request->all('email'));
-    if($mail->isEmpty()){
+    $user = User::where('email','=',request('email'))->get()->first();
+    if(null === $user){
       return response('Login failed', 404);
     }else{
-      return $mail;
+      return $user;
     }
   }
 
   public function commented(Request $request){
-    return Comment::create([
-      'c_Body' => $request['c_Body'],
+    $createComment =  Comment::create([
+      'comment' => $request['comment'],
       'newspaperCommentId' => $request['newspaperCommentId'],
       'newsfeedCommentId' => $request['newsfeedCommentId'],
       'userCommentId' => $request['userCommentId']
     ]);
+
+    $user = User::find($createComment->userCommentId);
+  
+    $id = $createComment->id;
+    $commentText = $createComment->comment;
+    return [
+      'data' =>[
+        'id' => $id,
+        'comment' => $commentText ,
+        'username' => $user->name,
+        'date' => $createComment->created_at
+      ]
+    ];
   }
 
   public function newspaperComment($newspaperId){

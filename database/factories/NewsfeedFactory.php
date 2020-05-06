@@ -7,10 +7,11 @@ use Faker\Generator as Faker;
 
 $factory->define(Newsfeed::class, function (Faker $faker) {
     return [
-        'bodyText'=>$faker->paragraph,
-        'commentCounts'=>$faker->randomDigit,
-        'loveCounts'=>$faker->randomDigit,
-        'viewCounts'=>$faker->randomDigit,
-        'isApprove'=>$faker->randomDigit,
+    	'title' => $faker->name,
+        'description'=>$faker->paragraph,
+        'comment_counts'=>$faker->randomDigit,
+        'love_counts'=>$faker->randomDigit,
+        'view_counts'=>$faker->randomDigit,
+        'is_approve'=>$faker->randomDigit,
     ];
 });

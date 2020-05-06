@@ -16,7 +16,6 @@ Route::get('/user/{userId}','UserController@show');
 Route::get('/home-newsfeed','ApiController@newfeedlist');
 Route::get('/home-newspaper','ApiController@newspaperlist');
 
-
 // user
 Route::post('/user/login','ApiController@login');
 Route::post('/user/register','ApiController@register');

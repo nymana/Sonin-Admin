@@ -20,7 +20,6 @@ class CreateImagesTable extends Migration
             $table->string('medium')->nullable();
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('img_categories')->onDelete('cascade')->onUpdate('cascade');
-            $table->json('json')->nullable();
             $table->timestamps();
         });
     }

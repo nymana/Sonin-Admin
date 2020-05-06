@@ -6,14 +6,10 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Body</th>
-            <th scope="col">Comments</th>
-            <th scope="col">Loves</th>
-            <th scope="col">Views</th>
-            <th scope="col">IsApprove</th>
-            <th scope="col">Upload At</th>
-            <th scope="col">Last Update </th>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -23,31 +19,17 @@
                     {{$nf->id}}
                 </th>
                 <th class="tg-01ax">
-                    {{$nf->bodyText}}
-                </th>
-                <th class="tg-01ax">
-                    {{$nf->commentCounts}}
-                </th>
-                <th class="tg-01ax">
-                    {{$nf->loveCounts}}
-                </th>
-                <th class="tg-01ax">
-                    {{$nf->viewCounts}}
-                </th>
-                <th class="tg-01ax">
-                    {{$nf->isApprove}}
-                </th>
-                <th class="tg-01ax">
-                    {{$nf->created_at}}
-                </th>
-                <th class="tg-01ax">
-                    {{$nf->updated_at}}
+                    {{$nf->title}}
                 </th>
                 <th class="tg-01ax">
                     <a href="{{ route('newsfeed.edit',$nf->id) }}"><img src="{{ asset('img/edit.svg') }}" width="25" height="25"></a>
                 </th>
                 <th class="tg-01ax">
-                    <img src="{{ asset('img/eyeopen.svg') }}" width="25" height="25">
+                    <form action="{{ route('newsfeed.destroy',$nf->id) }}" method="post">
+                        @method('delete')
+                        @csrf
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
                 </th>
             </tr>
         @endforeach

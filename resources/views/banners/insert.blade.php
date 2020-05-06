@@ -22,7 +22,6 @@
     @endif
     <form action="{{ route('insertBanner.store')}}" method="POST" enctype="multipart/form-data">
       @csrf
-      Select Banner:
       <input type='file' name="image" onchange="readURL(this);" class="bg-white">
       <img id="blah" src="http://placehold.it/1800x900" alt="your image" class="img-fluid display-3" >
       <button type="submit" class="btn btn-primary float-right mt-3">save</button>

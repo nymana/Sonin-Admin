@@ -17,7 +17,7 @@ class CreateBannersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('newspaper_id')->nullable();
             $table->foreign('newspaper_id')->references('id')->on('newspapers')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('banner_img_path');
+            $table->string('image');
             $table->timestamps();
         });
     }

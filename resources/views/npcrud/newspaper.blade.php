@@ -8,12 +8,8 @@
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Title</th>
-            <th scope="col">Comments</th>
-            <th scope="col">Downloads</th>
-            <th scope="col">Views</th>
-            <th scope="col">IsApprove</th>
-            <th scope="col">Upload At</th>
-            <th scope="col">Last Update </th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -26,28 +22,14 @@
                     {{$news->title}}
                 </th>
                 <th class="tg-01ax">
-                    {{$news->commentCounts}}
-                </th>
-                <th class="tg-01ax">
-                    {{$news->downloadCounts}}
-                </th>
-                <th class="tg-01ax">
-                    {{$news->viewCounts}}
-                </th>
-                <th class="tg-01ax">
-                    {{$news->isApprove}}
-                </th>
-                <th class="tg-01ax">
-                    {{$news->created_at}}
-                </th>
-                <th class="tg-01ax">
-                    {{$news->updated_at}}
-                </th>
-                <th class="tg-01ax">
                     <a href="{{ route('newspaper.edit',$news->id) }}"><img src="{{ asset('img/edit.svg') }}" width="25" height="25"></a>
                 </th>
                 <th class="tg-01ax">
-                    <img src="{{ asset('img/eyeopen.svg') }}" width="25" height="25">
+                    <form action="{{ route('newspaper.destroy',$news->id) }}" method="post">
+                        @method('delete')
+                        @csrf
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
                 </th>
             </tr>
         @endforeach

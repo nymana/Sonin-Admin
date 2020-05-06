@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\CreateBannerController;
 
 Route::get('/', function () { //
     return redirect()->to('home');
@@ -18,6 +18,8 @@ Route::resource('user','UserController');
 Route::resource('image','ImageController');
 
 Route::resource('banners','BannersController');
+
+Route::get('/banners/{banner}/news/{news}', [CreateBannerController::class, 'addBanner']);
 
 Route::post('save', 'ImageController@save');
 

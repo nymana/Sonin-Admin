@@ -16,8 +16,6 @@ class CommentController extends Controller
     {
         $comment =  Comment::orderby('id','desc')->get();
         return view('comcrud\comment',['comment'=>$comment ,]);
-
-//        return Comment::paginate();
     }
 
     /**
@@ -84,6 +82,7 @@ class CommentController extends Controller
      */
     public function destroy(comment $comment)
     {
-        dd($comment);
+        $comment->delete();
+        return back();
     }
 }

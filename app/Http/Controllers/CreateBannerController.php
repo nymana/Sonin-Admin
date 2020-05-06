@@ -27,10 +27,10 @@ class CreateBannerController extends Controller
           'image' => 'required|image|mimes:jpeg,png,jpg,svg|max:5048',
       ]);
       $path = $request->file('image')->storePublicly('image',['disk' => 'public']);
-      $host = $request->getHttpHost();
-      $url = "$host"."/"."$path";
+      $host = $request->getSchemeAndHttpHost();
+      $url = $host."/".$path;
       $check = Banner::insertGetId([
-          'banner_img_path' => $url
+          'image' => $url
       ]);
       return redirect()->back()->withSuccess('Great! Image has been successfully uploaded.');
     }
@@ -53,5 +53,13 @@ class CreateBannerController extends Controller
     public function destroy(CreateBannerController $createBannerController)
     {
         //
+    }
+
+    public function addBanner(Banner $banner, Newspaper $news)
+    {
+      $banner->newspaper_id = $news->id;
+      $banner->save();
+      return redirect('/banners');
+      // dd($banner, $news);
     }
 }

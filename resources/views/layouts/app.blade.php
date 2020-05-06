@@ -97,6 +97,8 @@
                         <div class="card-header bg-primary text-light">Create</div>
                         <ul class="list-group">
                             <li class="list-group-item"><a href="/insertBanner" class="text-dark">Create Banner</a></li>
+                            <li class="list-group-item"><a href="/newsfeed/create" class="text-dark">Add Newsfeed</a></li>
+                            <li class="list-group-item"><a href="/newspaper/create" class="text-dark">Add Newspaper</a></li>
                         </ul>
                     </div>
                 </div>

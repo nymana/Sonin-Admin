@@ -9,9 +9,9 @@ $factory->define(Newspaper::class, function (Faker $faker) {
     return [
         'title'=>$faker->name,
         'description'=>$faker->paragraph,
-        'commentCounts'=>$faker->randomDigit,
-        'downloadCounts'=>$faker->randomDigit,
-        'viewCounts'=>$faker->randomDigit,
-        'isApprove'=>$faker->randomDigit,
+        'comment_counts'=>$faker->randomDigit,
+        'download_counts'=>$faker->randomDigit,
+        'view_counts'=>$faker->randomDigit,
+        'is_approve'=>$faker->randomDigit,
     ];
 });

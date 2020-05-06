@@ -16,14 +16,13 @@ class CreateNewspapersTable extends Migration
         Schema::create('newspapers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title')->nullable();
-            $table->string('file')->nullable();
+            $table->string('file_url')->nullable();
             $table->string('image')->nullable();
             $table->longText('description');
-            $table->integer('commentCounts');
-            $table->integer('downloadCounts');
-            $table->integer('viewCounts');
-            $table->tinyInteger('isApprove');
-            $table->json('json')->nullable();
+            $table->integer('comment_counts');
+            $table->integer('download_counts');
+            $table->integer('view_counts');
+            $table->tinyInteger('is_approve');
             $table->timestamps();
         });
     }

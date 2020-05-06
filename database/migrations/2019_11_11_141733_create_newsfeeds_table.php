@@ -15,13 +15,13 @@ class CreateNewsfeedsTable extends Migration
     {
         Schema::create('newsfeeds', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->longText('bodyText');
+            $table->string('title');
+            $table->longText('description');
             $table->string('image')->nullable();
-            $table->integer('commentCounts');
-            $table->integer('loveCounts');
-            $table->integer('viewCounts');
-            $table->tinyInteger('isApprove');
-            $table->json('json')->nullable();
+            $table->integer('comment_counts');
+            $table->integer('love_counts');
+            $table->integer('view_counts');
+            $table->tinyInteger('is_approve');
             $table->timestamps();
         });
     }

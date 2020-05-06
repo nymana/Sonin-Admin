@@ -14,14 +14,15 @@ class BannersController extends Controller
   {
     $banner =  Banner::orderbyDesc('id')->get();
     $newspaper =  Newspaper::orderbyDesc('id')->get();
-    return view('banners.banner',['banners'=>$banner]);
+    return view('banners.banner')
+        ->with('banners', $banner)
+        ->with('newspapers', $newspaper);
   }
 
   public function create()
   {
     //
   }
-
 
   public function store(Request $request)
   {

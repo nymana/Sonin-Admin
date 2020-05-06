@@ -25,8 +25,6 @@ class CreateLoveTable extends Migration
 
             $table->unsignedBigInteger('user_loves')->nullable();
             $table->foreign('user_loves')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-
-            $table->json('json');
             $table->timestamps();
         });
     }
