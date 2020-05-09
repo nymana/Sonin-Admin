@@ -21,7 +21,7 @@ class NewsfeedController extends Controller
 
     public function store(Request $request)
     {
-        $host = $request->getHttpHost();
+        $host = request()->getSchemeAndHttpHost();
         $path = $request->file('image')->storePublicly('image',['disk' => 'public']);
 
         $newsfeedStore = new Newsfeed;
@@ -45,7 +45,6 @@ class NewsfeedController extends Controller
             'love_counts' => $newsfeed->love_counts,
             'view_counts' => $newsfeed->view_counts
         ]);
-        // return Newsfeed::findOrFail($newsfeedId);
     }
 
     public function edit($id)
