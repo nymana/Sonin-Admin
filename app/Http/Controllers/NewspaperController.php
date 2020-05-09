@@ -47,8 +47,8 @@ class NewspaperController extends Controller
     $filePath = $request->file('file_url')->storePublicly('file',['disk' => 'public']);
     $imagePath = $request->file('image')->storePublicly('image',['disk' => 'public']);
 
-    $newsStore->image = $host."/".$filePath;
-    $newsStore->file_url = $host."/".$imagePath;
+    $newsStore->image = $host."/".$imagePath;
+    $newsStore->file_url = $host."/".$filePath;
     $newsStore->save();
         // dd('asdasds');
     return redirect()->to('/newspaper');
