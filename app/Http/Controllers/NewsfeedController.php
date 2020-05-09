@@ -21,15 +21,13 @@ class NewsfeedController extends Controller
 
     public function store(Request $request)
     {
-        $host = request()->getSchemeAndHttpHost();
-        request()->file('image')->storeAs('/public/images/newsfeed', request()->file('image')->getClientOriginalName());
-
-        $image = 'storage/images/newsfeed/'.request()->file('image')->getClientOriginalName();
+        $host = $request->getHttpHost();
+        $path = $request->file('image')->storePublicly('image',['disk' => 'public']);
 
         $newsfeedStore = new Newsfeed;
         $newsfeedStore->title = $request->get('title');
         $newsfeedStore->description = $request->get('description');
-        $newsfeedStore->image = $host."/".$image;
+        $newsfeedStore->image = $host."/".$path;
         $newsfeedStore->save();
         return redirect('/newsfeed');
     }
