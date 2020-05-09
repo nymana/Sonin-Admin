@@ -43,14 +43,12 @@ class NewspaperController extends Controller
     $newsStore->description = $request->get('description');
 
     $host = request()->getSchemeAndHttpHost();
-    request()->file('image')->storeAs('/public/images/newspaper', request()->file('image')->getClientOriginalName());
-    request()->file('file_url')->storeAs('/public/file/newspaper', request()->file('file_url')->getClientOriginalName());
 
-    $image = 'storage/images/newspaper/'.request()->file('image')->getClientOriginalName();
-    $file =  'storage/file/newspaper/'.request()->file('file_url')->getClientOriginalName();
+    $filePath = $request->file('file_url')->storePublicly('file',['disk' => 'public']);
+    $imagePath = $request->file('image')->storePublicly('image',['disk' => 'public']);
 
-    $newsStore->image = $host."/".$image;
-    $newsStore->file_url = $host."/".$file;
+    $newsStore->image = $host."/".$filePath;
+    $newsStore->file_url = $host."/".$imagePath;
     $newsStore->save();
         // dd('asdasds');
     return redirect()->to('/newspaper');
@@ -82,17 +80,19 @@ class NewspaperController extends Controller
 
   public function update(Request $request, $id)
   {
+
+    $host = request()->getSchemeAndHttpHost();
     $newspaperUpdate = Newspaper::findorFail($id);
     $newspaperUpdate->title = $request->get('title');
     $newspaperUpdate->description = $request->get('description');
     if (request()->hasFile('image'))
     {
-      $newspaperUpdate->image = request()->file('image')->storeAs('/images/newspaper/', time().request()->file('image')->getClientOriginalName());
+      $newspaperUpdate->image = $host."/".$request->file('image')->storePublicly('image',['disk' => 'public']);
     }
 
     if (request()->hasFile('file_url'))
     {
-      $newspaperUpdate->file_url = request()->file('file_url')->storeAs('/file/newspaper/', time().request()->file('file_url')->getClientOriginalName());
+      $newspaperUpdate->file_url = $host."/".$request->file('file_url')->storePublicly('file',['disk' => 'public']);
     }
 
     $newspaperUpdate->save();

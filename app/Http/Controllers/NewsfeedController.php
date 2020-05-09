@@ -11,7 +11,7 @@ class NewsfeedController extends Controller
     public function index()
     {
         $newsfeed =  Newsfeed::orderby('id','desc')->get();
-        return view('nfcrud\newsfeed',['newsfeed'=>$newsfeed,]);
+        return view('nfcrud.newsfeed',['newsfeed'=>$newsfeed,]);
     }
 
     public function create()
@@ -53,7 +53,7 @@ class NewsfeedController extends Controller
     public function edit($id)
     {
         $newsfeedEdit = Newsfeed::findorFail($id);
-        return view('nfcrud\edit',['update'=>$newsfeedEdit,]);
+        return view('nfcrud.edit',['update'=>$newsfeedEdit,]);
     }
 
     public function update(Request $request, $id)
@@ -61,7 +61,9 @@ class NewsfeedController extends Controller
         $newsfeedUpdate = Newsfeed::findorFail($id);
         if (request()->hasFile('image'))
         {
-            $newsfeedUpdate->image = $request->file('image')->storeAs('/images/newsfeed', time().request()->file('image')->getClientOriginalName());
+            $host = $request->getHttpHost();
+            $path = $request->file('image')->storePublicly('image',['disk' => 'public']);
+            $newsfeedUpdate->image = $host.'/'.$path;
         }
         $newsfeedUpdate->title = $request ->input('title');
         $newsfeedUpdate->description = $request ->input('description');
