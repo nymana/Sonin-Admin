@@ -34,3 +34,5 @@ Route::get('file-upload', 'FileUploadController@fileUpload')->name('file.upload'
 Route::post('file-upload', 'FileUploadController@fileUploadPost')->name('file.upload.post');
 
 Route::get('s', 'NewspaperController@selectIdForBanner');
+
+Route::get('/about','HomeController@about');

@@ -20,4 +20,8 @@ class HomeController extends Controller
         return view('home',['newspaper'=>$newspaper,]);
     }
 
+    public function about(){
+    	return view('about');
+    }
+
 }
