@@ -15,7 +15,7 @@ class CommentController extends Controller
     public function index()
     {
         $comment =  Comment::orderby('id','desc')->get();
-        return view('comcrud\comment',['comment'=>$comment ,]);
+        return view('comcrud.comment',['comment'=>$comment ,]);
     }
 
     /**
@@ -59,7 +59,7 @@ class CommentController extends Controller
     public function edit($id)
     {
         $commentEdit = Comment::findorFail($id);
-        return view('comcrud\edit',['update'=>$commentEdit,]);
+        return view('comcrud.edit',['update'=>$commentEdit,]);
     }
 
     /**
